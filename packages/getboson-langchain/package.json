@@ -1,6 +1,6 @@
 {
   "name": "@getboson/langchain",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "Boson integration for LangChain (compat wrapper around @langfuse/langchain)",
   "type": "module",
   "sideEffects": false,

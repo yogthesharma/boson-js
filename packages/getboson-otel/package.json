@@ -1,6 +1,6 @@
 {
   "name": "@getboson/otel",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "Boson OpenTelemetry helpers (compat wrapper around @langfuse/otel)",
   "type": "module",
   "sideEffects": false,
