@@ -1,6 +1,6 @@
 {
   "name": "@getboson/core",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "Boson core (compat wrapper around @langfuse/core)",
   "type": "module",
   "sideEffects": false,
