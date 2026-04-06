@@ -10,10 +10,28 @@
 
 Modular monorepo for Boson JS/TS SDK packages (wrappers around upstream Langfuse SDKs).
 
+## What is Boson vs Langfuse here?
+
+This repo intentionally contains **two layers**:
+
+- **Upstream Langfuse SDK packages (unchanged APIs)**: `@langfuse/*`
+  - These are the real implementations and match upstream closely to keep merges easy.
+  - Source lives under `packages/{client,core,tracing,otel,openai,langchain}`.
+
+- **Boson-branded install names (thin wrappers)**: `@getboson/*`
+  - These packages **only re-export** the upstream `@langfuse/*` packages.
+  - They exist so your users can `npm i @getboson/...` and import from `@getboson/...`,
+    while we keep internal naming compatible with upstream.
+  - Source lives under `packages/getboson-*`.
+
+If you’re building an app on Boson, prefer installing/importing from **`@getboson/*`**.
+
 ## Packages
 
 > [!IMPORTANT]
 > The SDK was rewritten in v5 and released in March 2026. Refer to the [v5 migration guide](https://langfuse.com/docs/observability/sdk/upgrade-path/js-v4-to-v5) for instructions on updating your code.
+
+### Upstream Langfuse packages
 
 | Package                                     | NPM                                                                                                               | Description                                               | Environments |
 | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ------------ |
@@ -23,7 +41,7 @@ Modular monorepo for Boson JS/TS SDK packages (wrappers around upstream Langfuse
 | [@langfuse/openai](./packages/openai)       | [![NPM](https://img.shields.io/npm/v/@langfuse/openai.svg)](https://www.npmjs.com/package/@langfuse/openai)       | Langfuse integration for OpenAI SDK                       | Universal JS |
 | [@langfuse/langchain](./packages/langchain) | [![NPM](https://img.shields.io/npm/v/@langfuse/langchain.svg)](https://www.npmjs.com/package/@langfuse/langchain) | Langfuse integration for LangChain                        | Universal JS |
 
-Boson-branded install names (thin wrappers that re-export the upstream SDKs):
+### Boson-branded install names (thin wrappers)
 
 | Package                                              | NPM                   | Description                                          | Environments |
 | ---------------------------------------------------- | --------------------- | ---------------------------------------------------- | ------------ |
