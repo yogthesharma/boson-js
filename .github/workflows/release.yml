@@ -79,11 +79,12 @@ jobs:
         env:
           GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
         run: |
-          git config user.name "langfuse-bot"
-          git config user.email "langfuse-bot@langfuse.com"
+          git config user.name "boson-bot"
+          git config user.email "boson-bot@getboson.com"
 
-          echo "$GH_ACCESS_TOKEN" | gh auth login --with-token
-          gh auth setup-git
+          # Avoid `gh auth` (can require extra scopes like read:org).
+          # Use token-authenticated remote for pushing tags/releases.
+          git remote set-url origin "https://x-access-token:${GH_ACCESS_TOKEN}@github.com/${{ github.repository }}.git"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
