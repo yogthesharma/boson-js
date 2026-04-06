@@ -26,6 +26,25 @@ This repo intentionally contains **two layers**:
 
 If you’re building an app on Boson, prefer installing/importing from **`@getboson/*`**.
 
+### Recommended: single entrypoint
+
+For most users, prefer a single dependency:
+
+```bash
+npm i @getboson/sdk
+```
+
+Then import what you need from one place:
+
+```ts
+import {
+  LangfuseClient,
+  observe,
+  startActiveObservation,
+  LangfuseSpanProcessor,
+} from "@getboson/sdk";
+```
+
 ## Packages
 
 > [!IMPORTANT]
@@ -45,6 +64,7 @@ If you’re building an app on Boson, prefer installing/importing from **`@getbo
 
 | Package                                              | NPM                   | Description                                          | Environments |
 | ---------------------------------------------------- | --------------------- | ---------------------------------------------------- | ------------ |
+| [@getboson/sdk](./packages/getboson-sdk)             | `@getboson/sdk`       | Boson SDK single entrypoint                          | Universal JS |
 | [@getboson/client](./packages/getboson-client)       | `@getboson/client`    | Boson API client (wrapper around `@langfuse/client`) | Universal JS |
 | [@getboson/tracing](./packages/getboson-tracing)     | `@getboson/tracing`   | Boson tracing (wrapper around `@langfuse/tracing`)   | Node.js 20+  |
 | [@getboson/otel](./packages/getboson-otel)           | `@getboson/otel`      | Boson OpenTelemetry helpers (wrapper)                | Node.js 20+  |

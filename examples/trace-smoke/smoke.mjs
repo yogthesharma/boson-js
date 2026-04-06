@@ -1,7 +1,6 @@
 import "dotenv/config";
 import { NodeSDK } from "@opentelemetry/sdk-node";
-import { LangfuseSpanProcessor } from "@getboson/otel";
-import { observe, propagateAttributes } from "@getboson/tracing";
+import { LangfuseSpanProcessor, observe, propagateAttributes } from "@getboson/sdk";
 
 function requireEnv(name) {
   const v = process.env[name];

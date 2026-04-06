@@ -191,6 +191,27 @@ importers:
         specifier: ^1.9.0
         version: 1.9.0
 
+  packages/getboson-sdk:
+    dependencies:
+      '@getboson/client':
+        specifier: workspace:^
+        version: link:../getboson-client
+      '@getboson/core':
+        specifier: workspace:^
+        version: link:../getboson-core
+      '@getboson/langchain':
+        specifier: workspace:^
+        version: link:../getboson-langchain
+      '@getboson/openai':
+        specifier: workspace:^
+        version: link:../getboson-openai
+      '@getboson/otel':
+        specifier: workspace:^
+        version: link:../getboson-otel
+      '@getboson/tracing':
+        specifier: workspace:^
+        version: link:../getboson-tracing
+
   packages/getboson-tracing:
     dependencies:
       '@langfuse/tracing':
