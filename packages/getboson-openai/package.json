@@ -1,6 +1,6 @@
 {
   "name": "@getboson/openai",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "description": "Boson integration for OpenAI SDK (compat wrapper around @langfuse/openai)",
   "type": "module",
   "sideEffects": false,

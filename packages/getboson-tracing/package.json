@@ -1,6 +1,6 @@
 {
   "name": "@getboson/tracing",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "description": "Boson tracing (compat wrapper around @langfuse/tracing)",
   "type": "module",
   "sideEffects": false,

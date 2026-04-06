@@ -1,6 +1,6 @@
 {
   "name": "@getboson/client",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "description": "Boson API client (compat wrapper around @langfuse/client)",
   "type": "module",
   "sideEffects": false,

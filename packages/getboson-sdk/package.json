@@ -1,6 +1,6 @@
 {
   "name": "@getboson/sdk",
-  "version": "5.1.0",
+  "version": "5.1.2",
   "description": "Boson JS/TS SDK (single entrypoint)",
   "type": "module",
   "sideEffects": false,
