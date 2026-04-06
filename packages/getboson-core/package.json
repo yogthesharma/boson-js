@@ -1,0 +1,41 @@
+{
+  "name": "@getboson/core",
+  "version": "5.0.2",
+  "description": "Boson core (compat wrapper around @langfuse/core)",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "clean": "rm -rf dist"
+  },
+  "author": "Boson",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yogthesharma/boson.git",
+    "directory": "packages/getboson-core"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@langfuse/core": "workspace:^"
+  },
+  "peerDependencies": {
+    "@opentelemetry/api": "^1.9.0"
+  }
+}

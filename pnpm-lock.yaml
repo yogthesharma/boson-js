@@ -155,6 +155,51 @@ importers:
         specifier: ^24.1.0
         version: 24.1.0
 
+  packages/getboson-client:
+    dependencies:
+      '@langfuse/client':
+        specifier: workspace:^
+        version: link:../client
+
+  packages/getboson-core:
+    dependencies:
+      '@langfuse/core':
+        specifier: workspace:^
+        version: link:../core
+      '@opentelemetry/api':
+        specifier: ^1.9.0
+        version: 1.9.0
+
+  packages/getboson-langchain:
+    dependencies:
+      '@langfuse/langchain':
+        specifier: workspace:^
+        version: link:../langchain
+
+  packages/getboson-openai:
+    dependencies:
+      '@langfuse/openai':
+        specifier: workspace:^
+        version: link:../openai
+
+  packages/getboson-otel:
+    dependencies:
+      '@langfuse/otel':
+        specifier: workspace:^
+        version: link:../otel
+      '@opentelemetry/api':
+        specifier: ^1.9.0
+        version: 1.9.0
+
+  packages/getboson-tracing:
+    dependencies:
+      '@langfuse/tracing':
+        specifier: workspace:^
+        version: link:../tracing
+      '@opentelemetry/api':
+        specifier: ^1.9.0
+        version: 1.9.0
+
   packages/langchain:
     dependencies:
       '@langchain/core':

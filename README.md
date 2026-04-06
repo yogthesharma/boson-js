@@ -1,6 +1,6 @@
 ![GitHub Banner](https://github.com/langfuse/langfuse-js/assets/2834609/d1613347-445f-4e91-9e84-428fda9c3659)
 
-# langfuse-js
+# boson-js
 
 [![MIT License](https://img.shields.io/badge/License-MIT-red.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![CI test status](https://img.shields.io/github/actions/workflow/status/langfuse/langfuse-js/ci.yml?style=flat-square&label=All%20tests)](https://github.com/langfuse/langfuse-js/actions/workflows/ci.yml?query=branch%3Amain)
@@ -8,7 +8,7 @@
 [![Discord](https://img.shields.io/discord/1111061815649124414?style=flat-square&logo=Discord&logoColor=white&label=Discord&color=%23434EE4)](https://discord.gg/7NXusRtqYU)
 [![YC W23](https://img.shields.io/badge/Y%20Combinator-W23-orange?style=flat-square)](https://www.ycombinator.com/companies/langfuse)
 
-Modular mono repo for the Langfuse JS/TS client libraries.
+Modular monorepo for Boson JS/TS SDK packages (wrappers around upstream Langfuse SDKs).
 
 ## Packages
 
@@ -22,6 +22,18 @@ Modular mono repo for the Langfuse JS/TS client libraries.
 | [@langfuse/otel](./packages/otel)           | [![NPM](https://img.shields.io/npm/v/@langfuse/otel.svg)](https://www.npmjs.com/package/@langfuse/otel)           | Langfuse OpenTelemetry export helpers                     | Node.js 20+  |
 | [@langfuse/openai](./packages/openai)       | [![NPM](https://img.shields.io/npm/v/@langfuse/openai.svg)](https://www.npmjs.com/package/@langfuse/openai)       | Langfuse integration for OpenAI SDK                       | Universal JS |
 | [@langfuse/langchain](./packages/langchain) | [![NPM](https://img.shields.io/npm/v/@langfuse/langchain.svg)](https://www.npmjs.com/package/@langfuse/langchain) | Langfuse integration for LangChain                        | Universal JS |
+
+Boson-branded install names (thin wrappers that re-export the upstream SDKs):
+
+| Package                                              | NPM                   | Description                                          | Environments |
+| ---------------------------------------------------- | --------------------- | ---------------------------------------------------- | ------------ |
+| [@getboson/client](./packages/getboson-client)       | `@getboson/client`    | Boson API client (wrapper around `@langfuse/client`) | Universal JS |
+| [@getboson/tracing](./packages/getboson-tracing)     | `@getboson/tracing`   | Boson tracing (wrapper around `@langfuse/tracing`)   | Node.js 20+  |
+| [@getboson/otel](./packages/getboson-otel)           | `@getboson/otel`      | Boson OpenTelemetry helpers (wrapper)                | Node.js 20+  |
+| [@getboson/openai](./packages/getboson-openai)       | `@getboson/openai`    | Boson OpenAI integration (wrapper)                   | Universal JS |
+| [@getboson/langchain](./packages/getboson-langchain) | `@getboson/langchain` | Boson LangChain integration (wrapper)                | Universal JS |
+
+> The wrappers exist to let users install/import **Boson** packages while keeping internal code aligned with upstream Langfuse for easier syncing.
 
 ## Documentation
 

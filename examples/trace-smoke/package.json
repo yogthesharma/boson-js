@@ -1,0 +1,15 @@
+{
+  "name": "trace-smoke",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node smoke.mjs"
+  },
+  "dependencies": {
+    "@getboson/otel": "workspace:*",
+    "@getboson/tracing": "workspace:*",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/sdk-node": "^0.203.0",
+    "dotenv": "^17.2.0"
+  }
+}
