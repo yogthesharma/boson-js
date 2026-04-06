@@ -33,7 +33,7 @@
     "dist"
   ],
   "dependencies": {
-    "@langfuse/otel": "workspace:^"
+    "@langfuse/otel": "^5.0.2"
   },
   "peerDependencies": {
     "@opentelemetry/api": "^1.9.0"

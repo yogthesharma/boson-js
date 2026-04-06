@@ -33,6 +33,6 @@
     "dist"
   ],
   "dependencies": {
-    "@langfuse/openai": "workspace:^"
+    "@langfuse/openai": "^5.0.2"
   }
 }

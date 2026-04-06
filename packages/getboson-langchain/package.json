@@ -33,6 +33,6 @@
     "dist"
   ],
   "dependencies": {
-    "@langfuse/langchain": "workspace:^"
+    "@langfuse/langchain": "^5.0.2"
   }
 }

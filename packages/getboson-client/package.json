@@ -33,6 +33,6 @@
     "dist"
   ],
   "dependencies": {
-    "@langfuse/client": "workspace:^"
+    "@langfuse/client": "^5.0.2"
   }
 }
