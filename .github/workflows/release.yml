@@ -199,6 +199,7 @@ jobs:
         if: inputs.dry_run == false
         env:
           GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_TAG: ${{ steps.release-params.outputs.tag }}
         run: |
           pnpm exec release-it ${{ steps.release-params.outputs.release_increment }} ${{ steps.release-params.outputs.pre_release_flag }} --ci --config .release-it.ci.json
@@ -207,6 +208,7 @@ jobs:
         if: inputs.dry_run == true
         env:
           GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_TAG: ${{ steps.release-params.outputs.tag }}
         run: |
           echo "🧪 Running in DRY RUN mode - no changes will be pushed"
